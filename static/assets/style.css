@@ -1,0 +1,35 @@
+html {
+  background-color: black;
+}
+body {
+  text-align: center;
+  font-family: Verdana,sans-serif;
+}
+h1 {
+  font-family: Helvetica,sans-serif;
+  font-stretch: ultra-condensed;
+  font-size: 28pt;
+}
+.logo {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+/*
+   logo farben:
+   crimson
+   midnightblue
+   COLOR1: #808080;
+   COLOR2: #BFBFBF;
+   COLOR3: #A8A8A8;
+
+*/
+#band-logo {
+  border: solid midnightblue 2px;
+}
+
+
+@media screen and (max-width: 480px) {
+    #band-logo {
+        width: 100%;
+    }
+}

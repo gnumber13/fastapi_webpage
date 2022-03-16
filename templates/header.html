@@ -1,0 +1,8 @@
+<div class="menubar">
+<ul>
+  {% for item in entry_list %}
+  <li><a href="{{item['url']}}"> {{ item['name'] }}</a></li>
+  {% endfor %}
+  <li style="float:right"><a class="active" id="about">Über uns</a></li>
+</ul> 
+</div>

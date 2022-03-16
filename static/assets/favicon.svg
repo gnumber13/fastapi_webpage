@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100mm"
+   height="100mm"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20, custom)"
+   sodipodi:docname="favicon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.57530391"
+     inkscape:cx="-67.790257"
+     inkscape:cy="249.43338"
+     inkscape:window-width="1920"
+     inkscape:window-height="969"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="137.08189"
+       y="355.63699"
+       width="362.10312"
+       height="201.74316"
+       id="rect2894" />
+  </defs>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       aria-label="VQ"
+       transform="matrix(3.2405063,0,0,3.1449631,-429.8481,-1146.1302)"
+       id="text2892"
+       style="font-size:40px;line-height:1.25;font-family:'AvantGarde LT Medium';-inkscape-font-specification:'AvantGarde LT Medium, ';white-space:pre;shape-inside:url(#rect2894)">
+      <path
+         d="m 147.88281,365.35156 h -0.99609 l -2.8125,27.28516 h -3.1836 l -2.61718,-27.28516 h -0.9961 v -0.72265 h 5.19532 v 0.72265 h -0.9961 l 2.08985,23.96485 2.32421,-23.96485 H 144.875 v -0.72265 h 3.00781 z"
+         style="font-family:'Niagara Solid';-inkscape-font-specification:'Niagara Solid';fill:#191970"
+         id="path826" />
+      <path
+         d="m 158.87891,388.75 q 0,1.58203 -1.28907,2.77344 -1.26953,1.17187 -3.10547,1.30859 v 3.39844 h -0.80078 v -3.39844 q -1.85547,-0.13672 -3.14453,-1.30859 -1.26953,-1.19141 -1.26953,-2.77344 v -20.23438 q 0,-1.67968 1.40625,-2.87109 1.42578,-1.21094 3.39844,-1.21094 1.99219,0 3.39844,1.21094 1.40625,1.19141 1.40625,2.87109 z m -3.20313,1.75781 v -23.75 q 0,-0.66406 -0.46875,-1.13281 -0.46875,-0.46875 -1.13281,-0.46875 -0.66406,0 -1.13281,0.46875 -0.46875,0.46875 -0.46875,1.13281 v 23.75 q 0,1.21094 1.21093,1.5625 v -4.16015 h 0.80078 v 4.16015 q 1.19141,-0.35156 1.19141,-1.5625 z"
+         style="font-family:'Niagara Solid';-inkscape-font-specification:'Niagara Solid';fill:#dc143c"
+         id="path828" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,23 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<style>
+  {% include 'style.css' %}
+  {% include 'navbar.css' %}
+  {% include 'hamburger.css' %}
+</style>
+
+<script src=""></script>
+  <body>
+    {% include 'navbar-horizontal.html' %}
+    {% include 'hamburger.html' %}
+
+    <div class="content-container">
+    {% include entry_html %}
+    </div>
+  </body>
+</html> 
