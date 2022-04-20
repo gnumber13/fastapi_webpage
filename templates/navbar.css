@@ -2,7 +2,7 @@
 
 :root {
     --mobile-menubar-height: 30px;
-    --logo-height: 60px;
+    --logo-height: 40px;
     --header-height: 50px;
 }
 
@@ -20,7 +20,14 @@ html {
 .logo a{
   font-size: 2rem;
   color: midnightblue;
+
 }
+.logo img:hover{background: ghostwhite;}
+.logo img{
+    max-height: var(--logo-height);
+    padding: 0;
+    margin: 5px;
+    }
 
 .header {
   background: salmon;
