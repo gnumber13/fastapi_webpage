@@ -1,0 +1,18 @@
+
+News: 
+Markdown dateien (for loop durch ordner)
+Home:
+1 Markdown datei
+Kontakt:
+1 Markdown datei
+
+Config:
+    prio1:
+    - markdown dateinamen
+    - markdown ordner für news/blog
+    - menüeinträge
+
+    prio2:
+    - logo dateiname
+    - grundlegende farben?
+
