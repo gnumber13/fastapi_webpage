@@ -2,19 +2,50 @@ import markdown as md
 import os
 import yaml
 
+#markdown_dir = "markdown/"
+#html_render_dir = "html_renders/"
+#templates_dir = "templates/"
+
 def md_to_html(md_content):
     return md.markdown(md_content)
-
-def load_yaml_data(filename, dataname):
-    with open(filename, 'r') as file:
-        my_data = yaml.safe_load(file)
-    return my_data[dataname]
 
 def mdfile_to_html(filename):
     with open(filename, 'r') as md_file:
         md_content = md_file.read()
     html_content = md_to_html(md_content)
     return html_content
+
+def load_yaml_data(filename, dataname):
+    with open(filename, 'r') as file:
+        my_data = yaml.safe_load(file)
+    return my_data[dataname]
+
+def concat_blogs(markdown_path):
+    dirlist = os.listdir(markdown_path)
+
+    for item in dirlist:
+        extension = os.path.splitext(item)[1]
+
+        if extension == '.d':
+            print(extension)
+            dirlist_per_blog = os.listdir("markdown/" + item)
+
+            blog_html = ""
+            for blog_item in dirlist_per_blog:
+                with open("markdown/" + item + "/" + blog_item, 'r') as blog_file:
+                    item_md = blog_file.read()
+                    item_html = md_to_html(item_md)
+                    blog_html = blog_html + "<div class='blog_entrie'>" + item_html + "</div>"
+
+                item_basename = get_base_filename(item)
+
+                with open("templates/html_renders/" + item_basename + "_blog.html", 'w') as out_file:
+                    out_file.write(blog_html)
+                    
+
+
+def list_files_in_folder(path):
+    return os.listdir(path)
 
 def get_base_filename(filename):
     base = os.path.basename(filename)
@@ -34,8 +65,9 @@ def update_html():
 
         templates_folder = "templates/"
         markdown_folder = "markdown/"
+        html_render_dir = templates_folder + "html_renders/"
         rel_path = markdown_folder + md_file
-        html_file = templates_folder + base_file + ".html"
+        html_file = html_render_dir + base_file + ".html"
 
         print(md_file, html_file)
 
@@ -43,3 +75,4 @@ def update_html():
 
         with open(html_file, 'w') as file:
             file.write(html_content)
+
