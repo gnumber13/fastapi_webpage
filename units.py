@@ -22,6 +22,7 @@ def load_yaml_data(filename, dataname):
 
 def concat_blogs(markdown_path):
     dirlist = os.listdir(markdown_path)
+    dirlist = sorted(dirlist, reverse=True)
 
     for item in dirlist:
         extension = os.path.splitext(item)[1]
