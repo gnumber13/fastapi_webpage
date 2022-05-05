@@ -11,6 +11,9 @@ html {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
+  /*
+  overflow: hidden;
+  */
 }
 
 .logo {
@@ -39,6 +42,12 @@ html {
   background: linear-gradient(0deg, lightgrey, grey);
   border-bottom: .5px solid lightgrey;
   */
+
+  width: 100%;
+  overflow: hidden;
+  top: 0;
+  position: fixed;
+
   background: #191970;
   display: flex;
   margin: 0;
@@ -46,16 +55,17 @@ html {
   height: var(--header-height);
   flex-direction: row;
   justify-content: space-between;
-  box-shadow: 0 1px 10px 3px black;
+  box-shadow: 0 0px 2.9px 1px black;
   z-index: 4;
 }
 
 .header a {
     text-decoration: none;
-
 }
 
 .navbar {
+  /*
+  */
   display: flex;
   margin: 0;
   padding: 0;
@@ -91,15 +101,15 @@ html {
 }
 
 .navbar a {
-  color: aliceblue;
+color: aliceblue;
 }
 
 /*
 .navbar li:hover {
-  background: royalblue;
+background: royalblue;
 }
 .navbar li:hover > a {
-  color: midnightblue;
+color: midnightblue;
 }
 
 */
@@ -131,9 +141,25 @@ html {
     }
     .content {
       width: 90vw;
+      padding-left: 0em;
+      padding-right: 0em;
     }
-    .content-container {
-    }
+
+  .content h1 {
+    font-size: 1.6em;
+  }
+  .content h2 {
+    font-size: 1.3em;
+  }
+  .content h3 {
+    font-size: 1.15em;
+  }
+  .content p {
+    font-size: 1em;
+  }
+  .content-container {
+    padding-left: 0em;
+  }
 }
 
 @media screen and (max-width: 414px) {
@@ -150,8 +176,26 @@ html {
         max-width: 70vw;
         height: auto;
     }
-    .content {
-      width: 90vw;
+
+  .content-container {
+      padding-left: 0em;
+  }
+.content {
+  width: 90vw;
+  padding-left: 0em;
+  padding-right: 0em;
+}
+.content h1 {
+  font-size: 1.4em;
+}
+  .content h2 {
+    font-size: 1.2em;
+  }
+  .content h3 {
+    font-size: 1.15em;
+  }
+    .content p {
+      font-size: .8em;
     }
     :root {
         --header-height: 50px;
