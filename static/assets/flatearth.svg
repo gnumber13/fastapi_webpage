@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1000cm"
+   height="1000cm"
+   viewBox="0 0 10000 10000"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="flatearth.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="8.6110157"
+     inkscape:cx="18999.385"
+     inkscape:cy="12501.951"
+     inkscape:window-width="1856"
+     inkscape:window-height="997"
+     inkscape:window-x="64"
+     inkscape:window-y="34"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#1a1a1a;stroke-width:148.582;stroke-dashoffset:11.1798"
+       id="path61"
+       cx="4991.8696"
+       cy="8272.8955"
+       r="4970.4541" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.230247;stroke-dashoffset:11.1798;stroke-opacity:1"
+       id="rect325"
+       width="39.769753"
+       height="962.29474"
+       x="5007.0347"
+       y="2492.7583" />
+  </g>
+</svg>

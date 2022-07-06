@@ -98,14 +98,27 @@ html {
 
   .content {
     max-width: 90vw;
-    width: 1000px;
+    min-width: 40vw;
     /*
+    width: 1000px;
     background: var(--bg-color);
     margin: 0;
     padding: 0;
     padding-top: 30px
      * */
   }
+
+  .content ul {
+      margin-left: 2em;
+  }
+  .content h1,
+  .content h2,
+  .content h3 {
+      margin-top: 0.3em;
+      margin-bottom: 0.3em;
+  }
+
+
   .panel-left {
     width: 100%;
     height: auto;

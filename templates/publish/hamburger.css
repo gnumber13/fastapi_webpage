@@ -1,6 +1,11 @@
 :root {
-    --fg-color: midnightblue;
+    --base-dark: #2B2E43;
+    --base-color: #191970;
+    --accent-color: #ec1923;
     --bg-color: white;
+    --font-color: #26293C;
+    --fg-color: var(--base-dark);
+
     --hamburger-width: 35px;
     --hamburger-height: 35px;
     --hamburger-border: 0px;
@@ -8,6 +13,7 @@
     --hamburgerYpos: 75px;
     --hamburgerXpos: 0;
     --hamburger-icon-width: 30px;
+    --slider-width: 150px;
 }
 
 /* ==================
@@ -19,6 +25,7 @@
     box-sizing: border-box;
 }
 body {
+    color: var(--font-color);
     background: var(--bg-color);
     min-height: 100vh;
 }
@@ -33,13 +40,17 @@ body {
 }
 
 .slider-container {
-  position: absolute;
-  background: var(--bg-color);
-  left: -150px;
-  width: 150px;
-  height: 100%;
-  transition: all .2s ease-out;
-  z-index: 2;
+
+    top: calc(var(--header-height));
+    position: fixed;
+    overflow: hidden;
+
+    background: var(--bg-color);
+    left: -150px;
+    width: var(--slider-width);
+    height: 100%;
+    transition: all .2s ease-out;
+    z-index: 2;
 }
 
 .slider {
@@ -62,6 +73,31 @@ body {
   margin: 0;
 }
 
+.overlay {
+    visibility: hidden;
+    position: fixed;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    top: var(--header-height);
+    background: black;
+}
+
+/*
+.overlay-toggler {
+    top: var(--header-height);
+    left: 200px;
+    position: fixed;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    z-index: 6;
+    opacity: 0.5;
+    cursor: pointer;
+}
+*/
+
 .slider .category:hover {
     background: lightgrey;
 }
@@ -76,7 +112,8 @@ body {
 .hamburger-container {
 
     top: calc(var(--header-height) + 3px);
-    position: absolute;
+    position: fixed;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,7 +130,9 @@ body {
 }
 
 .toggler {
-    position: absolute;
+    top: calc(var(--header-height) + 3px);
+    position: fixed;
+    overflow: hidden;
     /*
     top: var(--hamburgerYpos);
     */
@@ -111,6 +150,7 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
+    color: 
 }
 .hamburger > div {
     content: '';
@@ -119,17 +159,18 @@ body {
     width: var(--hamburger-icon-width);
     height: 3px;
     
-    background: var(--fg-color);
+    background: var(--font-color);
     border-radius: 1.5px;
     transition: all .2s ease-out;
 }
+
 .hamburger > div:before,
 .hamburger > div:after {
     content: '';
     position: absolute;
     width: var(--hamburger-icon-width);
     height: 3px;
-    background: var(--fg-color);
+    background: var(--font-color);
     border-radius: 1.5px;
     transition: all .2s ease-out;
     transform: translateY(10px);
@@ -147,6 +188,10 @@ body {
 }
 .toggler:checked ~ .hamburger-container > .hamburger > div:after {
     transform: translateY(0);
+}
+
+.toggler:checked ~ .overlay {
+    visibility: visible;
 }
 
 /*
