@@ -180,8 +180,10 @@ color: midnightblue;
         text-align: center;
         margin-bottom: 0.4em;
         margin-top: 0.4em;
+        /*
         margin-left: 7vw; 
         margin-right: 7vw; 
+        */
     }
     .content-container .content > p {
         text-align: center;
