@@ -18,8 +18,6 @@ limitations under the License.
 @licend  The above is the entire license notice
 for the JavaScript code in this page.
 */
-function uncheckToggler(element) {
+function uncheckToggler() {
     document.getElementById("toggler").checked = false;
-    //first_child = element.parentNode.parentNode.parentNode.parentNode.firstElementChild;
-    //first_child.checked = false;
 }
