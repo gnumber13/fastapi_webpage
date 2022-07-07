@@ -150,6 +150,9 @@ body {
     border: var(--hamburger-border) solid var(--fg-color);
 }
 
+.toggler2 {
+
+}
 .toggler {
     top: calc(var(--header-height) + 3px);
     position: fixed;
