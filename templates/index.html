@@ -41,7 +41,8 @@
 function uncheckToggler(element) {
  // document.getElementById("toggler").checked = false;
     child_elements = element.parentNode.parentNode.parentNode.parentNode.children
-    toggler = child_elements.getElementById('toggler')
+    //toggler = child_elements.getElementById('toggler')
+    toggler = child_elements[0]
 
     
   console.log(child_elements.length)
