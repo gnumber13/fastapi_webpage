@@ -20,6 +20,6 @@ for the JavaScript code in this page.
 */
 function uncheckToggler(element) {
     document.getElementById("toggler").checked = false;
-    first_child = element.parentNode.parentNode.parentNode.parentNode.firstElementChild;
-    first_child.checked = false;
+    //first_child = element.parentNode.parentNode.parentNode.parentNode.firstElementChild;
+    //first_child.checked = false;
 }
