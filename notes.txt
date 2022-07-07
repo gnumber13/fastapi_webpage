@@ -14,5 +14,4 @@ Config:
 
     prio2:
     - logo dateiname
-    - grundlegende farben?
 
