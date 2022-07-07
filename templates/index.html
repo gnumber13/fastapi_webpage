@@ -41,11 +41,12 @@
 function uncheckToggler(element) {
  // document.getElementById("toggler").checked = false;
     child_elements = element.parentNode.parentNode.parentNode.parentNode.children;
+    first_child = element.parentNode.parentNode.parentNode.parentNode.firstElementChild
    // toggler = child_elements.getElementById('toggler');
     toggler = child_elements;
 
   console.log(child_elements.length);
-  console.log(child_elements.firstChild.nodeName);
+  console.log(first_child);
     //element.checked = false;
 }
 // @license-end
