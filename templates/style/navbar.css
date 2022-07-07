@@ -183,7 +183,9 @@ color: midnightblue;
         margin-right: 7vw; 
     }
     .content-container .content > p {
+        /*
         margin-left: 7vw;
+        */
         margin-right: 7vw;
     }
 
