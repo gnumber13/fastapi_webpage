@@ -113,7 +113,9 @@ body {
 */
 
 .slider .category:hover {
+  /*
     background: lightgrey;
+    */
     font-weight: bold;
 }
 .slider h4{
