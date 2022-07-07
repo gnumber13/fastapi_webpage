@@ -177,6 +177,7 @@ color: midnightblue;
         margin-top: 0;
     }
     .content-container .content > h1 {
+        text-align: center;
         margin-bottom: 0.4em;
         margin-top: 0.4em;
         margin-left: 7vw; 
