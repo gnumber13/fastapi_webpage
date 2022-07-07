@@ -177,6 +177,8 @@ color: midnightblue;
         margin-top: 0;
     }
     .content-container .content > h1 {
+        margin-bottom: 0.4em;
+        margin-top: 0.2em;
         margin-left: 7vw; 
         margin-right: 7vw; 
     }
