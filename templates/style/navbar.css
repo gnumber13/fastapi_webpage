@@ -28,8 +28,8 @@ html {
 */
 
 .logo img:hover{
-    background: rgba(0,0,0,0.5);
-    box-shadow: 0px 0px 3px 3px black;
+    background: var(--base-darkest);
+    box-shadow: 0px 0px 3px 3px var(--base-darkest);
 }
 
 .logo img {
@@ -96,17 +96,13 @@ html {
 
 .navbar .category:hover {
     background: white;
-    color: var(--font-color);
     box-shadow: inset 0px 0px 7px grey;
     border-bottom: 1px solid var(--base-dark);
-    /*
-    border: .5px solid lightgrey;
-    box-shadow: 0px -2px 2px 2px white;
-    */
+    color: var(--font-color);
 }
 
 .navbar a {
-color: aliceblue;
+    color: var(--bg-color);
 }
 
 /*
