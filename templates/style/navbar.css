@@ -173,7 +173,7 @@ color: midnightblue;
 
 @media screen and (max-width: 414px) {
 
-    .content {
+    .content-container {
         margin-top: 0;
     }
     .navbar-container{
