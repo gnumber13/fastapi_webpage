@@ -15,11 +15,13 @@
 // @license magnet:?xt=urn:btih:8e4f440f4c65981c5bf93c76d35135ba5064d8b7&dn=apache-2.0.txt Apache 2.0
 function uncheckToggler(element) {
  // document.getElementById("toggler").checked = false;
-    child_nodes = element.parentNode.parentNode.parentNode.parentNode.children
+    child_elements = element.parentNode.parentNode.parentNode.parentNode.children
+    toggler = child_elements.getElementById('toggler')
 
-
+    
+  console.log(child_elements.length)
+  console.log(toggler)
     //element.checked = false;
-  console.log(child_nodes.length)
 }
 // @license-end
 </script>
