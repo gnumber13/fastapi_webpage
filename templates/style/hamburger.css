@@ -117,7 +117,7 @@ body {
     background: lightgrey;
     */
     font-weight: bold;
-    text-shadow: 2px 2px var(--accent-color);
+    text-shadow: 1px 1px 1px var(--accent-color);
 }
 .slider h4{
    text-decoration: underline; 
