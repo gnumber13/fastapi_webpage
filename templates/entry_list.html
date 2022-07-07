@@ -1,5 +1,5 @@
       {% for entry in entry_list %}
-        <a href="{{ entry.url }}" class="category-link" onclick="console.log(this.parent.parent.parent)">
+        <a href="{{ entry.url }}" class="category-link" onclick="console.log(this.parentNode)">
           <li class="category">
                 {{ entry.name }}
           </li>
