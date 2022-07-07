@@ -179,7 +179,7 @@ color: midnightblue;
     .content-container h1 {
         margin-left: 0.6em; 
     }
-    .content-container p {
+    .content-container .content p {
         margin-left: 0.6em;
     }
     .navbar-container{
