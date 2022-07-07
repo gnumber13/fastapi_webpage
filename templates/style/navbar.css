@@ -176,7 +176,7 @@ color: midnightblue;
     .content-container {
         margin-top: 0;
     }
-    .content-container > p,
+    .content-container p,
     .content-container h1 {
         margin-left: 0.6em; 
     }
