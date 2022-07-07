@@ -41,13 +41,12 @@
 function uncheckToggler(element) {
  // document.getElementById("toggler").checked = false;
     child_elements = element.parentNode.parentNode.parentNode.parentNode.children;
-    toggler = child_elements.getElementById('toggler');
-   // toggler = child_elements;
+   // toggler = child_elements.getElementById('toggler');
+    toggler = child_elements;
 
-    
   console.log(child_elements.length);
     //element.checked = false;
-  //toggler.forEach(loopthrough);
+  toggler.forEach(loopthrough);
 }
   function loopthrough(item) {
     console.log(item)
