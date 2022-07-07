@@ -177,10 +177,10 @@ color: midnightblue;
         margin-top: 0;
     }
     .content-container h1 {
-        margin-left: 0.6em; 
+        margin-left: 0.7em; 
     }
     .content-container .content > p {
-        margin-left: 1em;
+        margin-left: 1.1em;
     }
     .navbar-container{
         visibility: hidden;    
