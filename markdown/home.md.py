@@ -1,7 +1,8 @@
 # Home
 
 ## HTML
-<img src="static/assets/venicequeen.svg">
+
+    <img src="static/assets/venicequeen.svg">
 
 ## MD
 ![](static/assets/venicequeen.svg)
