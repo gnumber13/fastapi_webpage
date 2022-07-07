@@ -11,6 +11,13 @@
   {% include 'style/navbar.css' %}
   {% include 'style/hamburger.css' %}
 </style>
+<script>
+  document.getElementsByClassName('category').onClick = function uncheckToggler() {
+      document.getElementsByClassName("toggler").checked = false;
+      console.log("uncheckt hamburger")
+    }
+</script>
+
 
   <body>
     {% include 'navbar-horizontal.html' %}
