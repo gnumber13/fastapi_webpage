@@ -42,12 +42,13 @@ function uncheckToggler(element) {
  // document.getElementById("toggler").checked = false;
     child_elements = element.parentNode.parentNode.parentNode.parentNode.children;
     first_child = element.parentNode.parentNode.parentNode.parentNode.firstElementChild;
-    elbyid = element.parentElement.parentElement.parentElement.parentElement.getElementById('toggler');
+    parent_element = element.parentElement.parentElement.parentElement.parentElement;
    // toggler = child_elements.getElementById('toggler');
     toggler = child_elements;
 
   console.log(child_elements.length);
   console.log(first_child);
+  console.log(parent_element);
     //element.checked = false;
 }
 // @license-end
