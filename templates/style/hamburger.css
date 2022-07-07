@@ -114,6 +114,7 @@ body {
 
 .slider .category:hover {
     background: lightgrey;
+    font-style: bold;
 }
 .slider h4{
    text-decoration: underline; 
