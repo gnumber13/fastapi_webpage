@@ -14,8 +14,8 @@ menu:
     url: "/contact"
     html_file: "contact.html"
     markdown_file: "contact.md.py"
-  - md_test:
-    name: "Markdown"
-    url: "/md_test"
-    html_file: "md_test.html"
-    markdown_file: "md_test.md.py"
+  #- md_test:
+  #  name: "Markdown"
+  #  url: "/md_test"
+  #  html_file: "md_test.html"
+  #  markdown_file: "md_test.md.py"
