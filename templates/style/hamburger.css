@@ -17,7 +17,11 @@
     --hamburgerYpos: 75px;
     --hamburgerXpos: 0;
     --hamburger-icon-width: 30px;
-    --slider-width: 150px;
+    --slider-width: 100vw;
+    /*
+    --slider-width: 150%;
+     *
+     */
 }
 
 /* ==================
@@ -49,19 +53,23 @@ body {
     position: fixed;
     overflow: hidden;
 
-    background: var(--bg-color);
-    left: -150px;
     width: var(--slider-width);
+    left: calc(-1 * var(--slider-width));
+    background: var(--bg-color);
     height: 100%;
     transition: all .2s ease-out;
     z-index: 2;
+    /*
+    width: var(--slider-width);
+    left: -150px;
+     * */
 }
 
 .slider {
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 150px;
+  width: var(--slider-width);
   /*
   left: 50px;
   */
@@ -196,7 +204,10 @@ body {
 }
 
 .toggler:checked ~ .overlay {
+/*
+ *
     visibility: visible;
+*/
 }
 /*
 .toggler:checked ~ .navbar-container > .navbar {
@@ -209,32 +220,13 @@ body {
 }
 
 .toggler:checked ~ .slider-container {
-    transform: translateX(150px);
     box-shadow: 0px 0px 5px 2px black;
+    transform: translateX(100vw);
+    /*
+    transform: translateX(150px);
+     */
 }
 
-.category-toggler:checked ~ .hamburger-container > .hamburger > div {
-
-}
-
-.category-toggler:checked ~ .slider-container {
-
-}
-
-.category-toggler:checked ~ .hamburger-container > .hamburger > div:before {
-
-}
-
-.category-toggler:checked ~ .overlay {
-    visibility: hidden;
-}
-.category-toggler:checked ~ .category a {
-    visibility: hidden;
-}
-
-.category-toggler:checked ~ .hamburger-container > .hamburger > div:after {
-
-}
 /*
 h1 {
   visibility: hidden;
