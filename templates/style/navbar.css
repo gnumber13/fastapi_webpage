@@ -178,9 +178,11 @@ color: midnightblue;
     }
     .content-container .content > h1 {
         margin-left: 7vw; 
+        margin-right: 7vw; 
     }
     .content-container .content > p {
         margin-left: 7vw;
+        margin-right: 7vw;
     }
     .navbar-container{
         visibility: hidden;    
