@@ -119,20 +119,20 @@ color: midnightblue;
  media queries
  ================ */
 
-@media screen and (min-width: 800px) {
+/*desktops*/
+@media screen and (min-width: 801px) {
     .hamburger-container {
         visibility: hidden;
     }
     .toggler {
         visibility: hidden;
     }
-}
-
-@media screen and (min-width: 800px) {
     .overlay {
         visibility: hidden;
     }
 }
+
+/*tablets*/
 @media screen and (max-width: 800px) and (min-width: 414px) {
     .navbar-container{
         visibility: hidden;    
