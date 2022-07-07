@@ -19,6 +19,3 @@ menu:
     url: "/md_test"
     html_file: "md_test.html"
     markdown_file: "md_test.md.py"
-
-
-
