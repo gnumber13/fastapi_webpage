@@ -176,6 +176,9 @@ color: midnightblue;
     .content-container {
         margin-top: 0;
     }
+    .content-container h1 {
+        margin-left: 1em; 
+    }
     .navbar-container{
         visibility: hidden;    
     }
