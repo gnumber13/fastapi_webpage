@@ -42,9 +42,8 @@ function uncheckToggler(element) {
  // document.getElementById("toggler").checked = false;
     child_elements = element.parentNode.parentNode.parentNode.parentNode.children;
     first_child = element.parentNode.parentNode.parentNode.parentNode.firstElementChild;
-    parent_element = element.parentElement.parentElement.parentElement.parentElement;
+    toggler = element.parentElement.parentElement.parentElement.parentElement.item("toggler");
    // toggler = child_elements.getElementById('toggler');
-    toggler = child_elements;
     first_child.checked = false;
 
   console.log(child_elements.length);
