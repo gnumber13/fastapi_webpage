@@ -18,6 +18,10 @@ limitations under the License.
 @licend  The above is the entire license notice
 for the JavaScript code in this page.
 */
+
+
+
+// reset mobile-menu to start position so that it stays hidden when user goes back one page
 function uncheckToggler() {
     document.getElementById("toggler").checked = false;
 }
