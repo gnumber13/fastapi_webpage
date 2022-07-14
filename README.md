@@ -10,7 +10,7 @@
 
 ### Roadmap 
 | Milestone                                                                                                         | Date                  |
-| :-:                                                                                                               | :-:                   |
+| :-                                                                                                               | :-:                   |
 | change from yaml to toml configuration format for python-3.11 to take advantage of tomllib from the python stdlib | October/November 2022 |
 | major refactoring of css code                                                                                     | -                     |
 | deploy proper unittests for next major refactoring of the python code                                             | -                     |
