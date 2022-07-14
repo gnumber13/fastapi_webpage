@@ -9,7 +9,7 @@
 
 
 ### Roadmap 
-| Milestone                                                                                                         | Date                  | Advantage                            |
+| Milestone                                                                                                         | Date                  | Advantages                           |
 | :-                                                                                                                | :-:                   | :-                                   |
 | change from yaml to toml configuration format for python-3.11 to take advantage of tomllib from the python stdlib | October/November 2022 | less dependencies                    |
 | major refactoring of css code                                                                                     | not planned           | better themability                   |
