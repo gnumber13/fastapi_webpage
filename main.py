@@ -20,6 +20,7 @@ def start_service(url, html_file):
 
 # concatenate blog items
 un.concat_blogs("markdown/")
+
 # update html files
 un.update_html()
 
@@ -43,3 +44,5 @@ for entry in entry_list:
     html_path = "html_renders/" + entry['html_file']
     print(html_path)
     start_service(entry['url'], html_path)
+
+
