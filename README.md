@@ -9,11 +9,11 @@
 
 
 ### Roadmap 
-| Milestone                                                                                                         | Date                  | Reason                            |
-| :-                                                                                                                | :-:                   | :-                                |
-| change from yaml to toml configuration format for python-3.11 to take advantage of tomllib from the python stdlib | October/November 2022 | Less dependencies                 |
-| major refactoring of css code                                                                                     | -                     | Better themability                |
-| deploy proper unittests for next major refactoring of the python code                                             | -                     | Better debugging and maintability |
+| Milestone                                                                                                         | Date                  | Reason                               |
+| :-                                                                                                                | :-:                   | :-                                   |
+| change from yaml to toml configuration format for python-3.11 to take advantage of tomllib from the python stdlib | October/November 2022 | Less dependencies                    |
+| major refactoring of css code                                                                                     | not planned           | Better themability                   |
+| deploy proper unittests for next major refactoring of the python code                                             | not planned           | Better debugging and maintainability |
    
 #### Quickfixes
   - set /home to root
