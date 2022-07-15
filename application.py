@@ -1,32 +1,36 @@
+#via stdlib
+import sys
+import os
+
+#via pip
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
-import sys
-import os
 
+#custom
 import units as un
 
 
 class fastapi_app():
     # create new FastAPI() object
     app = FastAPI()
-
-    app_root = os.path.abspath(os.curdir)
+    app_root = os.path.dirname(__file__)
 
     def __init__(self, static_assets, md_path):
         self.assets_path = self.app_root + "/" + static_assets
         self.md_path = self.app_root + "/" + md_path
+        self.config_file = self.app_root + "/config.yaml.py"
 
     def assemble_blogs(self):
-        un.concat_blogs(self.md_path)
+        un.concat_blogs(self.md_path, self.app_root)
 
     def assemble_html(self):
-        un.update_html()
+        un.update_html(self.app_root, self.config_file)
 
     def enable_service(self):
         #optional root api
-        entry_list = un.load_yaml_data("config.yaml.py", "menu")
+        entry_list = un.load_yaml_data(self.config_file, "menu")
 
         @self.app.get("/", response_class=HTMLResponse)
         async def read_item():
@@ -38,7 +42,7 @@ class fastapi_app():
             self.enable_url_response(entry['url'], html_path, entry_list)
 
     def enable_url_response(self, url, html_file, entry_list):
-        templates = Jinja2Templates(directory="templates")
+        templates = Jinja2Templates(directory=self.app_root + "/templates")
         @self.app.get(url, response_class=HTMLResponse)
         async def read_item(request: Request):
             return templates.TemplateResponse("index.html", \
