@@ -32,7 +32,7 @@ class fastapi_app():
         #optional root api
         entry_list = un.load_yaml_data(self.config_file, "menu")
 
-        @self.app.get("/", response_class=HTMLResponse)
+        @self.app.get("/test", response_class=HTMLResponse)
         async def read_item():
             return "fastapi is running\n"
 
