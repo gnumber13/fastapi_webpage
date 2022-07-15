@@ -20,7 +20,7 @@ class fastapi_app():
     def __init__(self, static_assets, md_path):
         self.assets_path = self.app_root + "/" + static_assets
         self.md_path = self.app_root + "/" + md_path
-        self.config_file = self.app_root + "/config.yaml.py"
+        self.config_file = self.app_root + "/config.yaml"
 
     def assemble_blogs(self):
         un.concat_blogs(self.md_path, self.app_root)
