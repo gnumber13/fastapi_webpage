@@ -27,7 +27,7 @@ def concat_blogs(markdown_path):
         extension = os.path.splitext(item)[1]
 
         if extension == '.d':
-            print(extension)
+            #print(extension)
             dirlist_per_blog = os.listdir("markdown/" + item)
             dirlist_per_blog = sorted(dirlist_per_blog, reverse=True)
 

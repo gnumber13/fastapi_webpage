@@ -1,48 +1,17 @@
-from fastapi import FastAPI, Request
-from fastapi.responses import HTMLResponse
-from fastapi.templating import Jinja2Templates
-from fastapi.staticfiles import StaticFiles
-from dataclasses import dataclass
+import uvicorn
 
-# units.py
-import units as un
+from application import fastapi_app
+app = fastapi_app("static", "markdown")
 
+app.mount_static_content()
 
-# functions
-def start_service(url, html_file):
-    #un.list_files_in_folder()
-    @app.get(url, response_class=HTMLResponse)
-    async def read_item(request: Request):
-        return templates.TemplateResponse("index.html", \
-                context={"request": request, "entry_list": entry_list, "entry_html": html_file })
+# everything with .d ending in markdown folder
+app.assemble_blogs()
 
+app.assemble_html()
 
+app.enable_service()
 
-# concatenate blog items
-un.concat_blogs("markdown/")
-
-# update html files
-un.update_html()
-
-
-
-# start main process
-app = FastAPI()
-
-#optional root api
-@app.get("/", response_class=HTMLResponse)
-async def read_item():
-    return "fastapi is running\n"
-
-# setup for static templates and static content
-app.mount("/static", StaticFiles(directory="static"), name="static")
-templates = Jinja2Templates(directory="templates")
-
-entry_list = un.load_yaml_data("config.yaml.py", "menu")
-
-for entry in entry_list:
-    html_path = "html_renders/" + entry['html_file']
-    print(html_path)
-    start_service(entry['url'], html_path)
-
+if __name__ == "__main__":
+    uvicorn.run("main:app", port=5000, log_level="info")
 
