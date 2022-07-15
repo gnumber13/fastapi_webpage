@@ -12,6 +12,7 @@ app.assemble_html()
 
 app.enable_service()
 
-if __name__ == "__main__":
-    uvicorn.run("main:app", port=5000, log_level="info")
+uvi_app = app.app
 
+if __name__ == "__main__":
+    uvicorn.run("main:uvi_app", port=5000, log_level="info")
