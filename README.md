@@ -20,5 +20,3 @@
   - set "fastapi is running" response to /test
 
 
-### Good to know:
-  - uses *.py ending for yaml and markdown files so that uvicorn picks up the changes without restarting
