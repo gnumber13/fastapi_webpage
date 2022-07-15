@@ -16,7 +16,7 @@
 | deploy proper unittests for next major refactoring of the python code                                             | not planned           | better debugging and maintainability |
    
 #### Quickfixes
-  - set /home to root
-  - set "fastapi is running" response to /test
+  - [solved] set /home to root
+  - [solved] set "fastapi is running" response to /test
 
 
