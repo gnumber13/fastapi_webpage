@@ -2,20 +2,19 @@
 import uvicorn
 
 #custom
-from application import fastapi_app
+import application as applib
+from application import app
 
-app = fastapi_app("static", "markdown")
+#myapp = fastapi_app("static", "markdown")
 
-app.mount_static_content()
+applib.mount_static_content()
 
 # everything with .d ending in markdown folder
-app.assemble_blogs()
+applib.assemble_blogs()
 
-app.assemble_html()
+applib.assemble_html()
 
-app.enable_service()
-
-uvi_entrypoint = app.app
+applib.enable_service()
 
 if __name__ == "__main__":
-    uvicorn.run("main:uvi_entrypoint", port=5000, log_level="info")
+    uvicorn.run("main:app", port=5000, log_level="info")

@@ -12,45 +12,49 @@ from fastapi.staticfiles import StaticFiles
 import units as un
 
 
-class fastapi_app():
-    # create new FastAPI() object
-    app = FastAPI()
-    app_root = os.path.dirname(__file__)
+app = FastAPI()
+app_root = os.path.dirname(__file__)
 
-    def __init__(self, static_assets, md_path):
-        self.assets_path = self.app_root + "/" + static_assets
-        self.md_path = self.app_root + "/" + md_path
-        self.config_file = self.app_root + "/config.yaml"
 
-    def assemble_blogs(self):
-        un.concat_blogs(self.md_path, self.app_root)
+config_file = app_root + "/" + "config.yaml"
 
-    def assemble_html(self):
-        un.update_html(self.app_root, self.config_file)
+project_config = un.load_yaml_data(config_file, "project_config")
 
-    def enable_service(self):
-        #optional root api
-        entry_list = un.load_yaml_data(self.config_file, "menu")
+assets_path = project_config['assets_path']
 
-        @self.app.get("/test", response_class=HTMLResponse)
-        async def read_item():
-            return "fastapi is running\n"
+md_path = project_config['md_path']
 
-        for entry in entry_list:
-            html_path = "html_renders/" + entry['html_file']
-            print(html_path)
-            self.enable_url_response(entry['url'], html_path, entry_list)
 
-    def enable_url_response(self, url, html_file, entry_list):
-        templates = Jinja2Templates(directory=self.app_root + "/templates")
-        @self.app.get(url, response_class=HTMLResponse)
-        async def read_item(request: Request):
-            return templates.TemplateResponse("index.html", \
-                    context={"request": request, "entry_list": entry_list, "entry_html": html_file })
 
-    def mount_static_content(self):
-        # setup for static templates and static content
-        print("assets =>>>" + self.assets_path)
-        mnt_path="/static"
-        self.app.mount(mnt_path, StaticFiles(directory=self.assets_path), name=self.assets_path)
+def assemble_blogs():
+    un.concat_blogs(md_path, app_root)
+
+def assemble_html():
+    un.update_html(app_root, config_file)
+
+def enable_service():
+    #optional root api
+    entry_list = un.load_yaml_data(config_file, "menu")
+
+    @app.get("/test", response_class=HTMLResponse)
+    async def read_item():
+        return "fastapi is running\n"
+
+    for entry in entry_list:
+        html_path = "html_renders/" + entry['html_file']
+        print(html_path)
+        enable_url_response(entry['url'], html_path, entry_list)
+
+def enable_url_response(url, html_file, entry_list):
+    templates = Jinja2Templates(directory=app_root + "/templates")
+    @app.get(url, response_class=HTMLResponse)
+    async def read_item(request: Request):
+        return templates.TemplateResponse("index.html", \
+                context={"request": request, "entry_list": entry_list, "entry_html": html_file })
+
+def mount_static_content():
+    # setup for static templates and static content
+    print("assets =>>>" + assets_path)
+    mnt_path="/static"
+    app.mount(mnt_path, StaticFiles(directory=assets_path), name=assets_path)
 
